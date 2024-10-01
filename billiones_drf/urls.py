@@ -1,9 +1,8 @@
 from django.contrib import admin
-from django.urls import path, include
-from django.views.generic import RedirectView
+from django.urls import path
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', RedirectView.as_view(url='/admin/', permanent=False)),  # Redirect root URL to admin
-    # Add other URL patterns here
+    path('admin/', admin.site.urls),  # Admin site URL
+    path('', auth_views.LoginView.as_view(), name='login'),  # Redirect root URL to built-in login view
 ]

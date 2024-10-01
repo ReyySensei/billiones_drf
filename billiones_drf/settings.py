@@ -69,12 +69,12 @@ TEMPLATES = [
 WSGI_APPLICATION = 'billiones_drf.wsgi.application'
 
 # Database settings (uncomment and configure if using a database)
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+     'default': {
+         'ENGINE': 'django.db.backends.sqlite3',
+         'NAME': BASE_DIR / 'db.sqlite3',
+     }
+ }
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
@@ -108,3 +108,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Directory for uploaded media fil
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Add this to your settings.py if it's not already present
+LOGIN_REDIRECT_URL = '/'  # Redirect to home after login
+LOGOUT_REDIRECT_URL = '/'  # Redirect to home after logout
