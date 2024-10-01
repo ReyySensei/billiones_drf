@@ -109,8 +109,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Directory for uploaded media fil
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-LOGIN_URL = 'login'  # Specify the login URL name
-LOGIN_REDIRECT_URL = '/'  # Redirect to home after login
-LOGOUT_REDIRECT_URL = '/'  # Redirect to home after logout
-
