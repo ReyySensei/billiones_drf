@@ -6,7 +6,10 @@
         },
         {
             "src": "billiones_drf/wsgi.py",
-            "use": "@vercel/python"
+            "use": "@vercel/python",
+            "config": {
+                "maxLambdaSize": "15mb"
+            }
         }
     ],
     "routes": [
